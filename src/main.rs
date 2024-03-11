@@ -25,6 +25,7 @@ fn main() {
     // let student3 = Faculty::CSIT(String::from("Vedas College"), 4);
     // println!("{:?} {:?} {:?}",student1,student2,student3)
 
+    // MATCH, An Enum
     enum Grade {
         Distinction(i32),
         FirstDiv(i32),
@@ -47,7 +48,7 @@ fn main() {
                 Grade::FirstDiv(_) => 3.6,
                 Grade::SecondDiv(_) => 3.0,
                 Grade::ThirdDiv(_) => 2.8,
-                Grade::Fail(_) => 1.0
+                Grade::Fail(_) => 1.0,
             }
         }
     }
@@ -57,5 +58,32 @@ fn main() {
     let result4 = Grade::ThirdDiv(49);
     let result5 = Grade::Fail(25);
     println!("{} {} {} {} {}",result1.calc_grade(),result2.calc_grade(),result3.calc_grade(),result4.calc_grade(),result5.calc_grade());
-    
+
+
+    //OPTION, An Enum
+    fn plus_one(number:Option<i32>)->Option<i32>{
+        match number{
+            Some(i) => Some(i+1),
+            None => None,
+        }
+    }
+    let instance1 = plus_one(Some(5));
+    let instance2 = plus_one(None);
+    println!("{:?} {:?}",instance1,instance2);
+
+
+    //Problem of match: Exhaustive checking i.e the requirement to define extra cases: None, _
+    let a = Some(5);
+    match a{
+        Some(i)=>println!("{}",i),
+        _ =>println!(""),
+    }
+
+    //If let solves this problem
+    //Note: Don't use == and don't revert the comparision aka a = Some() because compiler might confuse it with assignment
+    if let Some(n) = a{
+        println!("{}",n);
+    }
+
+
 }
