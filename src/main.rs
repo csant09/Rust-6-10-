@@ -57,5 +57,5 @@ fn main() {
     let result4 = Grade::ThirdDiv(49);
     let result5 = Grade::Fail(25);
     println!("{} {} {} {} {}",result1.calc_grade(),result2.calc_grade(),result3.calc_grade(),result4.calc_grade(),result5.calc_grade());
-
+    
 }
