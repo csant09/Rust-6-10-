@@ -37,7 +37,7 @@ fn main() {
             match self{
                 Grade::Distinction(per) => {
                     if *per>95{
-                        println!("WHOA! THAT'S SOME SERIOUS SCORE.");
+                        println!("WHOA! THAT'S SOME SERIOUS SCORE!!!");
                     }
                     else {
                         println!("YOU GOT A+. CONGRATULATIONS.");
