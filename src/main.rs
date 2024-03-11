@@ -40,7 +40,7 @@ fn main() {
                         println!("WHOA! THAT'S SOME SERIOUS SCORE!!!");
                     }
                     else {
-                        println!("YOU GOT A+. CONGRATULATIONS.");
+                        println!("YOU GOT A+. CONGRATULATIONS!!!");
                     }
                     4.0
                 },
