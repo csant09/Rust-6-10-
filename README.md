@@ -1,1 +1,2 @@
-# Rust-6-10-
+Rust Documentation
+Chapter 6 to 10.
